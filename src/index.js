@@ -4,14 +4,19 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import web3Onboard from './web3-onboard';
+import { Web3OnboardProvider } from "@web3-onboard/react";
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
+
 root.render(
   <StrictMode>
     <ColorModeScript />
+    <Web3OnboardProvider web3Onboard={web3Onboard}>
     <App />
+    </Web3OnboardProvider>
   </StrictMode>
 );
 
